@@ -2,8 +2,9 @@ public class Player {
     private String name;
     private int points;
     private double budgetAmount, debt, food, clothes, gas, savings, misc;
+    private boolean hasCreditCard;
 
-    public Player (String name, int points, double budgetAmount, double debt, double food, double clothes, double gas, double savings, double misc){
+    public Player (String name, int points, double budgetAmount, double debt, double food, double clothes, double gas, double savings, double misc, boolean hasCreditCard){
         this.name = name;
         this.points = points;
         this.budgetAmount = budgetAmount;
@@ -13,6 +14,7 @@ public class Player {
         this.gas = gas;
         this.savings = savings;
         this.misc = misc;
+        this.hasCreditCard = hasCreditCard;
     }
 
     public Player (String name, double budgetAmount) {
@@ -25,6 +27,7 @@ public class Player {
         this.gas = 0;
         this.savings = 0;
         this.misc = 0;
+        this.hasCreditCard = false;
     }
 
     public String getName() {
@@ -63,6 +66,10 @@ public class Player {
         return misc;
     }
 
+    public boolean getHasCreditCard() {
+        return hasCreditCard;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -97,6 +104,10 @@ public class Player {
 
     public void setMisc(double misc) {
         this.misc = misc;
+    }
+
+    public void setHasCreditCard(boolean hasCreditCard) {
+        this.hasCreditCard = hasCreditCard;
     }
 
     public double gainInterest() {
